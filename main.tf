@@ -26,3 +26,10 @@ resource "aws_instance" "ubuntu" {
     Name = var.instance_name
   }
 }
+
+resource "aws_eip" "terra-eip" {
+  vpc = true
+  tags = {
+    Name = "Terraform-eip"
+  }
+}
